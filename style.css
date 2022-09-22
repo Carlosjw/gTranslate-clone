@@ -15,8 +15,15 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Google';
+    src: url('fonts/google-font.woff2') format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
 *{
-    font-family: 'Roboto';
+    font-family: 'Google';
     /* color: #000; */
     margin: 0;
     padding: 0;
@@ -40,7 +47,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: var(--borders);
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+
 }
 
 header.main-header .menus{
@@ -58,6 +67,9 @@ header.main-header div:first-child{
 
 header.main-header .menus .google{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
 }
 
 header.main-header .menus .google span{
@@ -66,6 +78,7 @@ header.main-header .menus .google span{
 
 header.main-header .menus .google span:nth-child(1){
     color: #4285F4;
+    font-family: 'Google';
 }
 header.main-header .menus .google span:nth-child(2){
     color: #EA4335;
@@ -94,6 +107,7 @@ header.main-header div:last-child{
 }
 
 .main-navigation{
+    margin-left: 30px;
     width: 400px;
     height: 50px;
     /* border: 1px solid red; */
