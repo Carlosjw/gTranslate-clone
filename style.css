@@ -6,6 +6,7 @@
     --borders: #DADCE0;
     --arrow-color: #B5B6B7;
     --lang-letters: #5F6368;
+    --toggle-hover: #EFF0F0;
 }
 
 @font-face {
@@ -39,6 +40,7 @@ body{
     /* border: 1px solid; */
 }
 
+/* BARRA SUPERIOR */
 .main-header {
     width: 100%;
     height: 50px;
@@ -64,15 +66,20 @@ header.main-header div:first-child{
     gap: 10px;
 }
 
+header.main-header div:first-child > span {
+    color: var(--lang-letters);
+}
+
 header.main-header div svg{
     width: 35px;
     height: 35px;
     padding: 5px;
+    fill: var(--lang-letters);
     border-radius: 50%;
 }
 
 header.main-header div svg:hover{
-    background: var(--second-hover);
+    background: var(--toggle-hover);
 }
 header.main-header div:last-child{
     justify-content: flex-end;
@@ -126,15 +133,19 @@ header.main-header div:last-child{
     gap: 10px;
 }
 
+/* NAVEGAÇÃO TIPO DE TRADUÇÃO */
+
 .main-navigation{
-    margin-left: 30px;
-    width: 400px;
-    height: 50px;
+    /* margin-left: 30px; */
+    width: 100%;
+    height: 150px;
+    background: #FAFAFA;
+    border-bottom: 1px solid var(--borders);
     /* border: 1px solid red; */
 }
 
 .main-navigation ul{
-    width: 100%;
+    width: 30%;
     height: 40px;
     display: flex;
     align-items: center;
@@ -143,7 +154,7 @@ header.main-header div:last-child{
 
 }
 
-svg{
+.main-navigation ul li svg{
     width: 24px;
     height: 24px;
     color: var(--main-color)
@@ -151,9 +162,9 @@ svg{
 
 .main-navigation ul li{
     flex: 1;
-    padding: 5px;
+    padding: 7px;
     font-weight: 500;
-    color: var(--hover-color);
+    color: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,10 +174,6 @@ svg{
 
 }
 
-/* .main-navigation ul li:focus{
-    background: var(--active-color);
-} */
-
 .main-navigation ul li:nth-child(2){
     flex: 2;
 }
@@ -174,23 +181,176 @@ svg{
 .main-navigation ul li:hover{
     background: var(--second-hover);
     color: var(--hover-color);
+    cursor: pointer;
 }
 
 .main-navigation ul li:hover > svg{
     fill: var(--hover-color);
 }
 
+.main-content {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-content .main-div{
+    top: 120px;
+    width: 80%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--borders);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    position: absolute;
+}
+
+.main-content .main-div .main-lang{
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid var(--borders);
+}
+
+.main-content .main-div .main-lang .navigation-lang {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-content .main-div .main-lang .navigation-lang ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    /* border: 1px solid red; */
+    list-style: none;
+}
+
+.main-content .main-div .main-lang .navigation-lang ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .main-div .main-lang .navigation-lang ul li:hover{
+    background: var(--toggle-hover);
+}
+
+.main-content .main-div .main-lang .navigation-lang .list-one li{
+    flex: ;
+}
+
+.main-content .main-div .write-area {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+.main-content .main-div .write-area .translate-area{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid var(--borders);
+    padding: 15px;
+}
+
+.main-content .main-div .write-area .translate-area .input-area{
+    flex: 4;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.main-content .main-div .write-area .translate-area .output{
+    background: #FAFAFA;
+}
+
+
+.main-content .main-div .write-area .translate-area .interation-area{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 10px; */
+    /* border: 1px solid red; */
+}
+
+.main-content .main-div .write-area .translate-area .interation-area .info-area{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 1px solid red; */
+
+}
+
+.main-content .main-div .write-area .translate-area .interation-area .info-area .infor-letters{
+    font-size: 12px;
+    color: var(--arrow-color);
+}
+
+.main-content .main-div .write-area .translate-area .interation-area .info-area .lang-input {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-content .main-div .write-area .translate-area .interation-area .info-area .lang-input svg{
+    fill: var(--arrow-color);
+}
+
+.main-content .main-div .write-area .translate-area .interation-area .info-area .lang-input svg:last-child{
+    width: 10px;
+    height: 10px;
+}
+
+/* ÍCONES DE BAIXO */
 .bottom {
     width: 100%;
-    height: 34px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom ul {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
 
 .bottom ul li{
     display: flex;
+    align-items: center;
     flex-direction: column;
     color: #757575;
+    cursor: pointer;
 }
 
 .bottom ul li svg{
     fill: #757575;
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    border: 1px solid var(--borders);
+    border-radius: 50%;
+}
+
+li:hover{
+    cursor: pointer;
 }
