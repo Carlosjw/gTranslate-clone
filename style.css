@@ -47,7 +47,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--borders);
     margin-bottom: 10px;
 
 }
@@ -64,16 +64,36 @@ header.main-header div:first-child{
     gap: 10px;
 }
 
+header.main-header div svg{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+header.main-header div svg:hover{
+    background: var(--second-hover);
+}
+header.main-header div:last-child{
+    justify-content: flex-end;
+}
+
+header.main-header div:last-child img{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
 
 header.main-header .menus .google{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid red; */
+    margin-left: 7px;
 }
 
 header.main-header .menus .google span{
-    font-weight: 600;
+    font-weight: 500;
 }
 
 header.main-header .menus .google span:nth-child(1){
